@@ -5,6 +5,10 @@ const contactScheema = mongoose.Schema({
     name:String,
     phoneNumber:String,
     email:String,
+    image:{
+        type:String,
+        default :null
+    },
     createdAt:{
         type:Date,
         default:new Date()

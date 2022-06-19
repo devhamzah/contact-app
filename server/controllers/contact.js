@@ -10,3 +10,14 @@ export const getContacts = async (req,res) =>{
         res.status(404).json({err:error});
     }
 }
+//Saving contact in Database 
+export const saveContact = async (req,res) =>{
+    const data = req.body;
+    const contact = new ContactStore(data);
+    try {
+        await contact.save();
+        res.status(201).json(contact);
+    } catch (error) {
+        res.status(409).json({message:error.message});
+    }
+}

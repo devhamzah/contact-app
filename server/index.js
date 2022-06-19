@@ -11,7 +11,7 @@ const port = 5000;
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use('/',contactRoute);
+app.use('/contact',contactRoute);
 
 
 mongoose.connect(url,{
