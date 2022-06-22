@@ -5,6 +5,7 @@ const contactScheema = mongoose.Schema({
     name:String,
     phoneNumber:String,
     email:String,
+    bgColor:String,
     image:{
         type:String,
         default :null

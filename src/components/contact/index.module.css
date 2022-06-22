@@ -23,6 +23,7 @@
     text-transform: capitalize;
     transition: all 0.2s linear;
 }
+
 .contactName span:hover{
     color:rgb(26,115,232);
     cursor: pointer;
@@ -55,6 +56,19 @@
     height: 50px;
     border-radius: 50% ;
     object-fit: cover;
+}
+.contactBody .divh{
+    width: 50px;
+    height: 50px;
+    border-radius: 50% ;
+    /* background-color: orange; */
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
 }
 .contactBody{
     margin: 15px 0px;

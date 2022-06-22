@@ -5,6 +5,7 @@ import Contacts from "./components/contacts";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import {fetchingContacts} from "./redux/actions/contactActions";
+import DeleteModal from "./components/deleteModal";
 
 const App=()=>{
     const dispatch = useDispatch()
@@ -15,6 +16,7 @@ return <>
     <FormAddContact/> 
     <NavBar/>
     <Contacts/>
+    <DeleteModal/>
 </>
 }
 export default App;

@@ -8,6 +8,8 @@ const contactReducer = (state = initialState, action) => {
             return [
                 ...action.payload
             ];
+        case "DELETE_CONTACT":
+          return  state.filter((post) => post._id !== action.payload);
         case "NEW_CONTACT":
             return [
                 ...state,

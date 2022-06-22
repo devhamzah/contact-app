@@ -4,3 +4,9 @@ export const toggleForm = () =>{
         type:"TOGGLE_FORM_MODAL"
     }
 }
+export const togglDeleteModals = (id) =>{
+    return {
+        type:"TOGGLE_DELETE_MODAL",
+        payload:id
+    }
+}

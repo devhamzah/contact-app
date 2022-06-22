@@ -21,3 +21,13 @@ export const postContact = (fdata) => async (dispatch) => {
         console.log(error);
     }
 } 
+
+
+export const deleteContact = (id) => async (dispatch) =>{
+    try {
+        await apis.deleteContact(id);
+        
+    } catch (error) {
+       console.log(error)
+    }
+}

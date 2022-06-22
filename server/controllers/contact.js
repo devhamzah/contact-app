@@ -21,3 +21,13 @@ export const saveContact = async (req,res) =>{
         res.status(409).json({message:error.message});
     }
 }
+
+//Deleting contact 
+export const deleteContact  = async (req,res) =>{
+    try {
+        const {id} = req.params;
+        await ContactStore.findByIdAndDelete(id);
+    } catch (error) {
+        console.log("delete server failed")
+    }
+}
