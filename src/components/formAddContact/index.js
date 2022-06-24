@@ -1,7 +1,7 @@
 
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./index.module.css";
-import { toggleForm } from "../../redux/actions/uiAcions";
+import { toggleForm ,togglePushLoading } from "../../redux/actions/uiAcions";
 import { useState } from "react";
 import FileBase64 from "react-file-base64";
 import { postContact } from "../../redux/actions/contactActions";
@@ -37,6 +37,7 @@ const FormAddContact = () => {
             let newContact = {
                 ...formData,bgColor:colors[randomColor()]
             };
+            dispatch(togglePushLoading());
             dispatch(postContact(newContact));
             dispatch(toggleForm());
             clear();

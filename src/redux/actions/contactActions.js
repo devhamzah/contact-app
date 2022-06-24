@@ -16,6 +16,7 @@ export const fetchingContacts = () => async (dispatch) => {
 export const postContact = (fdata) => async (dispatch) => {
     try {
        const {data} = await apis.saveContact(fdata);
+        dispatch({type:"TOGGLE_PUSH_LOADING"});
         dispatch({type:"NEW_CONTACT", payload : data});
     } catch (error) {
         console.log(error);

@@ -10,3 +10,8 @@ export const togglDeleteModals = (id) =>{
         payload:id
     }
 }
+export const togglePushLoading = () =>{
+    return {
+        type: "TOGGLE_PUSH_LOADING"
+    }
+}
